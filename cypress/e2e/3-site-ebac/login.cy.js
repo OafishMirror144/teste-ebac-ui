@@ -60,9 +60,14 @@ describe('funcionalidade: login', () => {
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, emailteste12 (não é emailteste12? Sair)')
         cy.get('.woocommerce-MyAccount-navigation-link--customer-logout > a').click()
 
-
-
         })
+
+        it('deve fazer login com sucesso usando comandos customizados', () => {
+            
+            cy.login('emailteste12@teste1.com','melhor senha de teste')
+            cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, emailteste12 (não é emailteste12? Sair)')
+
+        });
 
 
 
