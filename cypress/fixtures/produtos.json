@@ -1,0 +1,23 @@
+[
+    {
+        "nomeProduto": "Ingrid Running Jacket",
+        "tamanho": "XS",
+        "cor": "Red",
+        "quantidade": 3
+
+    },
+    {
+        "nomeProduto": "Eos V-Neck Hoodie",
+        "tamanho": "XL",
+        "cor": "Green",
+        "quantidade": 9
+
+    },
+    {
+        "nomeProduto": "Helena Hooded Fleece",
+        "tamanho": "L",
+        "cor": "Blue",
+        "quantidade": 9
+
+    }
+]

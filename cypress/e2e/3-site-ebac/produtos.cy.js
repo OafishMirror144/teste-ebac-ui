@@ -12,8 +12,6 @@ describe('funcionalidade: produtos', () => {
            .first()
            .click()
 
-
-
     });
 
     it('deve selecionar o ultimo produto da lista', () => {
@@ -21,8 +19,6 @@ describe('funcionalidade: produtos', () => {
            //.first()
            .last()
            .click()
-
-
 
     });
 
@@ -33,28 +29,44 @@ describe('funcionalidade: produtos', () => {
            .eq(2)
            .click()
 
-
-
     });
 
     it('deve selecionar o produto /Ajax Full-Zip Sweatshirt/ da lista', () => {
-        produtosPage.busscarProdutoLista('Ajax Full-Zip Sweatshirt')
-
-
+        produtosPage.buscarProdutoLista('Ajax Full-Zip Sweatshirt')
 
     });
 
-    it.only('deve buscar um produto com sucesso', () => {
+    it('deve buscar um produto com sucesso', () => {
         let produto = 'Zeppelin Yoga Pant'
         produtosPage.buscarProduto(produto)
         cy.get('.product_title').should('contain', produto )
     });
 
     it('deve visitar a pagina do produto', () => {
-        
+        produtosPage.visitarProduto('Aether Gym Pant')
+        cy.get('.product_title').should('contain', 'Aether Gym Pant' )
     });
 
     it('deve adicionar produto ao carrinho', () => {
+        let qtd = 9
+    
+        produtosPage.buscarProduto('Josie Yoga Jacket')
+        produtosPage.addProdutoCarrinho('S','Blue', qtd)
+        
+    
+    });
+
+    it.only('deve adicionar produto ao carrinho buscando da massa de dados', () => {
+        cy.fixture('produtos').then(dados =>{
+
+        produtosPage.buscarProduto(dados[0].nomeProduto)
+        produtosPage.addProdutoCarrinho(
+             dados[0].tamanho,
+             dados[0].cor,
+             dados[0].quantidade)
+        cy.get('.woocommerce-message').should('contain', dados[0].nomeProduto)
+        })
+
         
     });
 
