@@ -1,7 +1,7 @@
 [
     {
-        "nomeProduto": "Ingrid Running Jacket",
-        "tamanho": "XS",
+        "nomeProduto": "Stellar Solar Jacket",
+        "tamanho": "L",
         "cor": "Red",
         "quantidade": 3
 
@@ -14,10 +14,17 @@
 
     },
     {
-        "nomeProduto": "Helena Hooded Fleece",
-        "tamanho": "L",
-        "cor": "Blue",
-        "quantidade": 9
+        "nomeProduto": "Selene Yoga Hoodie",
+        "tamanho": "XS",
+        "cor": "Purple",
+        "quantidade": 1
+
+    },
+    {
+        "nomeProduto": "Grayson Crewneck Sweatshirt",
+        "tamanho": "M",
+        "cor": "Red",
+        "quantidade": 1
 
     }
 ]
