@@ -56,7 +56,7 @@ describe('funcionalidade: produtos', () => {
     
     });
 
-    it('deve adicionar produto ao carrinho buscando da massa de dados', () => {
+    it.only('deve adicionar produto ao carrinho buscando da massa de dados', () => {
         cy.fixture('produtos').then(dados =>{
 
         produtosPage.buscarProduto(dados[0].nomeProduto)
@@ -64,6 +64,7 @@ describe('funcionalidade: produtos', () => {
              dados[0].tamanho,
              dados[0].cor,
              dados[0].quantidade)
+
         cy.get('.woocommerce-message').should('contain', dados[0].nomeProduto)
         })
 
